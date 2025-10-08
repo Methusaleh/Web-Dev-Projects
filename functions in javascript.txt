@@ -1,0 +1,115 @@
+//lifeInWeeks
+
+function lifeInWeeks(age) {
+   let maxAge = 90
+   let daysInYear = 365;
+   let weeksInYear = 52;
+   let monthsInYear = 12;
+   let daysLeft = ((maxAge*daysInYear) - (age*daysInYear));
+   let weeksLeft = ((maxAge*weeksInYear) - (age*weeksInYear));
+   let monthsLeft = ((maxAge*monthsInYear) - (age*monthsInYear));
+   console.log("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left."); 
+}
+
+lifeInWeeks(41);
+
+
+
+
+//fizzBuzz
+
+let output = [];
+let count = 1;
+
+function fizzBuzz() {
+if (count % 3 === 0 && count % 5 === 0) {
+    output.push("FizzBuzz");
+}  else if (count % 3 === 0) {
+    output.push("Fizz");
+}  else if (count % 5 === 0) {
+    output.push("Buzz");
+}  else {
+    output.push(count);
+}
+count++;
+
+//while loop fizzBuzz
+
+let output = [];
+let count = 1;
+
+function fizzBuzz() {
+    while (count<= 100) {
+        if (count % 3 === 0 && count % 5 === 0) {
+            output.push("FizzBuzz");
+        }  else if (count % 3 === 0) {
+            output.push("Fizz");
+        }  else if (count % 5 === 0) {
+            output.push("Buzz");
+        }  else {
+            output.push(count);
+        }
+        count++;
+    }
+    console.log(output);
+}
+
+
+//whosPaying
+
+function whosPaying(names) {
+    let numberOfPeople = names.length;
+    let randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+    let randomPerson = names[randomPersonPosition];
+
+    return randomPerson + " is going to buy lunch today!";
+    
+}
+
+    console.log(output)
+}
+
+fizzBuzz();
+
+
+//bottlesOfBeer
+
+let count = 100;
+
+function passThemAround() {
+    while (count > 0) {
+        if (count > 1) {
+            console.log(`${count} bottles of beer on the wall, ${count} bottles of beer.\n
+                    Take one down and pass it around, ${count - 1} bottles of beer on the wall.`)
+        } else {
+            console.log(`${count} bottle of beer on the wall, ${count} bottle of beer.\n
+                    Take one down and pass it around, ${count - 1} bottles of beer on the wall.`)
+        }
+    
+        count--;
+    }
+}
+
+
+//FOR LOOP SYNTAX
+
+for (let i=0; i<5; i++) {
+    console.log(i);
+}
+
+
+//fibonacciGenerator
+
+function fibonacciGenerator(n) {
+    let finalArray = [0, 1]
+    if (n === 0) {
+        return [];
+    } else if (n === 1) {
+        return [0];
+    }
+    while (n > finalArray.length) {
+        let nextNum = finalArray[finalArray.length - 1] + finalArray[finalArray.length - 2];
+        finalArray.push(nextNum)
+    }
+    console.log(finalArray);
+}
