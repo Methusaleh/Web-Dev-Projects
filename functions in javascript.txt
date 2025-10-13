@@ -113,3 +113,13 @@ function fibonacciGenerator(n) {
     }
     console.log(finalArray);
 }
+
+
+//CONSTRUCTOR FUNCTION AND CALL
+
+function HouseKeeper (yearsOfExperience, name, cleaningRepertoire) {
+    this.yearsOfExperience = yearsOfExperience;
+    this.name = name;
+    this.cleaningRepertoire = cleaningRepertoire;
+}
+
