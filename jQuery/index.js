@@ -1,3 +1,3 @@
-$("h1").text("Bye");
-
-$("button").html("<em>HEY</em>");
+$("button").on("click", function() {
+    $("h1").animate({opacity: 0.5});
+});
