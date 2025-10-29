@@ -16,20 +16,20 @@
   </p>
   <% if (seconds % 2===0) { %>
   <ul>
-    <% for(let i=0; i<items.length; i++) { %>
+    <% items.forEach((fruit)=> { %>
     <li>
-      <%= items[i] %>
-    </li>>
-    <% } %>
+      <%=fruit %>
+    </li>
+    <% }) %>
   </ul>
   <% } else { %>
   <p>No items to display</p>
   <% } %>
   <p>
-    <!-- HTML content goes here -->
+    <%- htmlContent %>
   </p>
 
-  <!-- Footer goes here -->
+  <%- include("footer.ejs") %>
 </body>
 
 </html>
