@@ -1,0 +1,11 @@
+<%-include("partials/header")%>
+
+<form action="/compose" method="POST">
+  <label for="postTitle">Post Title:</label>
+  <input type="text" id="postTitle" name="postTitle" required>
+    <label for="postContent">Post Content:</label>
+    <input type="text" id="postContent" name="postContent" required>
+    <input type="submit" value="Compose New Post">
+</form>
+
+<%-include("partials/footer")%>

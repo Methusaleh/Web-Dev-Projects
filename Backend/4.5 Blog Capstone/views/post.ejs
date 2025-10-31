@@ -1,0 +1,17 @@
+<%-include("partials/header")%>
+
+<h2>
+    <%= title %>
+</h2>
+<p>
+    <%= content %>
+</p>
+
+<form action="/delete" method="POST">
+  <input type="hidden" name="postId" value="<%= postID %>">
+  <input type="submit" value="Delete Post">
+</form>
+
+<a href="/edit/<%= postId %>">Edit Post</a>
+
+<%-include("partials/footer")%>
