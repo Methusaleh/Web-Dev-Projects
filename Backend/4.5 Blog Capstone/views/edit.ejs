@@ -4,8 +4,8 @@
   <label for="postTitle">Post Title:</label>
   <input type="text" id="postTitle" name="postTitle" value="<%= post.title %>" required>
     <label for="postContent">Post Content:</label>
-    <input type="text" id="postContent" name="postContent" value="<%= post.content %>" required>
-    <input type="submit" value="Compose New Post">
+    <textarea id="postContent" name="postContent" rows="8" required><%= post.content %></textarea>
+    <input type="submit" value="Save Changes">
 </form>
 
 <%-include("partials/footer")%>
