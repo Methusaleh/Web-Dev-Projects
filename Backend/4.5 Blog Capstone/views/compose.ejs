@@ -1,11 +1,11 @@
 <%-include("partials/header")%>
-
-<form action="/compose" method="POST">
-  <label for="postTitle">Post Title:</label>
-  <input type="text" id="postTitle" name="postTitle" required>
-    <label for="postContent">Post Content:</label>
-    <textarea id="postContent" name="postContent" rows="8" required></textarea>
-    <input type="submit" value="Compose New Post">
-</form>
-
+<div class="form-container">
+  <form action="/compose" method="POST">
+    <label for="postTitle">Post Title:</label>
+    <input type="text" id="postTitle" name="postTitle" required>
+      <label for="postContent">Post Content:</label>
+      <textarea id="postContent" name="postContent" rows="8" required></textarea>
+      <input type="submit" value="Compose New Post">
+  </form>
+</div>
 <%-include("partials/footer")%>

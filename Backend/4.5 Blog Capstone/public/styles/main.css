@@ -47,12 +47,24 @@
 }
 
 main {
+    flex-grow: 1;
+}
+
+.content-container {
     max-width: 960px;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
-    flex-grow: 1;
+}
+
+
+.form-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
 }
 
 body {

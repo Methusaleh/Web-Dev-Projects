@@ -1,17 +1,18 @@
 <%-include("partials/header")%>
+<div class="content-container">
+  <div class="post-content">
+    <h2><%= title %></h2>
+    <p><%= content %></p>
+  </div>
 
-<div class="post-content">
-  <h2><%= title %></h2>
-  <p><%= content %></p>
-</div>
+  <div class="post-actions">
+    <form action="/delete" method="POST">
+      <input type="hidden" name="postId" value="<%= postID %>">
+      <input type="submit" value="Delete Post" class="delete-btn">
+    </form>
 
-<div class="post-actions">
-  <form action="/delete" method="POST">
-    <input type="hidden" name="postId" value="<%= postID %>">
-    <input type="submit" value="Delete Post" class="delete-btn">
-  </form>
-
-  <a href="/edit/<%= postID %>">Edit Post</a>
+    <a href="/edit/<%= postID %>">Edit Post</a>
+  </div>
 </div>
 
 <%-include("partials/footer")%>
