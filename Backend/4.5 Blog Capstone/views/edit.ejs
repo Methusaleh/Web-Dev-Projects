@@ -1,0 +1,11 @@
+<%-include("partials/header")%>
+
+<form action="/update/<%= postID %>" method="POST">
+  <label for="postTitle">Post Title:</label>
+  <input type="text" id="postTitle" name="postTitle" value="<%= post.title %>" required>
+    <label for="postContent">Post Content:</label>
+    <input type="text" id="postContent" name="postContent" value="<%= post.content %>" required>
+    <input type="submit" value="Compose New Post">
+</form>
+
+<%-include("partials/footer")%>

@@ -31,10 +31,23 @@ app.get("/post/:postId", (req, res) => {
   }
 });
 
+app.get("/edit/:postId", (req, res) => {
+  const requestedPostId = parseInt(req.params.postId);
+  const post = posts[requestedPostId];
+  if (post) {
+    res.render("edit.ejs", { 
+      title: post.title, 
+      content: post.content, 
+      postID: requestedPostId });
+  } else {
+    res.status(404).send("Post not found");
+  }
+});
+
 app.post("/compose", (req, res) => {
   const postTitle = req.body.postTitle;
   const postContent = req.body.postContent;
-  // Here you would typically save the post to a database
+  // Here you would save the post to a database
   posts.push({ title: postTitle, content: postContent });
   res.redirect("/");
 });
